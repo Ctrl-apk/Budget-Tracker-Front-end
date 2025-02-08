@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💰 FinMaster - Smart Budget & Currency Tool</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">💰 FinMaster - Track & Convert with Ease</h1>
+
+        <!-- Smart Budget Tracker Section -->
+        <div class="tracker">
+            <h2>📊 Smart Budget Tracker</h2>
+            <div class="input-group">
+                <input type="text" id="category" placeholder="📂 Category (e.g., Food)" class="input-field"/>
+                <input type="number" id="amount" placeholder="💵 Amount" class="input-field"/>
+                <button onclick="addExpense()" class="btn">➕ Add Expense</button>
+            </div>
+            <h3>📈 Your Spending Overview</h3>
+            <div class="chart-container">
+                <canvas id="expenseChart"></canvas>
+            </div>
+            <ul id="expenseList" class="expense-list"></ul>
+
+            <!-- Budget Tip Section -->
+            <div class="budget-tip">
+                <h3>💡 Money-Saving Tip</h3>
+                <p id="quoteDisplay">Loading tip...</p>
+                <button id="newQuoteBtn" class="btn">🔄 Get New Tip</button>
+            </div>
+        </div>
+
+        <!-- Global Currency Converter Section -->
+        <div class="converter">
+            <h2>🌍 Global Currency Converter</h2>
+            <div class="input-group">
+                <input type="number" id="amountToConvert" placeholder="💰 Amount" class="input-field"/>
+                <select id="currencyFrom" class="input-field">
+                    <option value="USD">🇺🇸 USD - US Dollar</option>
+                    <option value="EUR">🇪🇺 EUR - Euro</option>
+                    <option value="INR">🇮🇳 INR - Indian Rupee</option>
+                    <option value="GBP">🇬🇧 GBP - British Pound</option>
+                    <option value="AUD">🇦🇺 AUD - Australian Dollar</option>
+                    <option value="CAD">🇨🇦 CAD - Canadian Dollar</option>
+                    <option value="JPY">🇯🇵 JPY - Japanese Yen</option>
+                    <option value="CNY">🇨🇳 CNY - Chinese Yuan</option>
+                </select>
+
+                <span class="arrow">➡️</span>
+
+                <select id="currencyTo" class="input-field">
+                    <option value="USD">🇺🇸 USD - US Dollar</option>
+                    <option value="EUR">🇪🇺 EUR - Euro</option>
+                    <option value="INR">🇮🇳 INR - Indian Rupee</option>
+                    <option value="GBP">🇬🇧 GBP - British Pound</option>
+                    <option value="AUD">🇦🇺 AUD - Australian Dollar</option>
+                    <option value="CAD">🇨🇦 CAD - Canadian Dollar</option>
+                    <option value="JPY">🇯🇵 JPY - Japanese Yen</option>
+                    <option value="CNY">🇨🇳 CNY - Chinese Yuan</option>
+                </select>
+
+                <button onclick="convertCurrency()" class="btn">🔄 Convert</button>
+            </div>
+            <p id="conversionResult" class="conversion-result"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
