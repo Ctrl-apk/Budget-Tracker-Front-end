@@ -126,7 +126,7 @@ function convertCurrency() {
 // Function to fetch and display a random budget tip
 async function fetchBudgetTip() {
     try {
-        const response = await fetch("https://budget-tracker-back-end-1.onrender.com/");
+        const response = await fetch("https://budget-tracker-back-end-1.onrender.com/quote");
 
         const data = await response.json();
 
